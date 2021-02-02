@@ -1,0 +1,38 @@
+.row {
+	color: white;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.row__posters {
+	display: flex;
+	/* adds a scroll bar */
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding: 10px;
+}
+
+/* hides the scrollbar to give a nice user experience */
+.row__posters::-webkit-scrollbar {
+	display: none;
+}
+.row__poster {
+	width: 100%;
+	object-fit: contain;
+	max-height: 100px;
+	margin-right: 15px;
+	/* adds a delay which give a smooth effect while hovering */
+	transition: transform 450ms;
+}
+
+.row__poster:hover {
+	transform: scale(1.1);
+}
+
+.row__posterLarge {
+	max-height: 230px;
+}
+
+.row__posterLarge:hover {
+	transform: scale(1.2);
+}
